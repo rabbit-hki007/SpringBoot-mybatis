@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+ <!-- 이 곳에 추가할 기능을 넣는다. -->
+
+ <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+   <layout class="ch.qos.logback.classic.PatternLayout">
+     <Pattern>[%d{yyyy-MM-dd HH:mm:ss}:%-3relative][%thread] %-5level %logger{36} - %msg%n</Pattern>
+   </layout>
+</appender>
+
+ <!-- 위에 appender만으로는 로그가 출력되지 않음 아래의 설정이 필요함  -->
+<root level="INFO">
+   <appender-ref ref="STDOUT"/>
+ </root>
+</configuration>
